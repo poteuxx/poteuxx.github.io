@@ -6,7 +6,7 @@ const tools = {
   optimise: "https://poteuxx.github.io/gaming-pc-opti-st/",
   store: "https://poteuxx.github.io/st-store/#accueil",
   solution: "https://poteuxx.github.io/st-solution/",
-  ai: "https://poteuxx.github.io/ai-generator/"
+  ai: "https://poteuxx.github.io/ai-generation/"
 };
 
 function loadTool(name) {
