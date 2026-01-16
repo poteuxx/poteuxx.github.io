@@ -8,37 +8,34 @@
 </head>
 <body>
 
-<!-- TOP BANNER -->
-<div class="top-banner">
-  Made by <strong>SolutionsTechnologie</strong>
+<!-- BRAND BANNER -->
+<div class="brand-banner">
+  Made by <span>SolutionsTechnologie</span>
 </div>
 
-<header>
-  <h1>🧩 Poteuxx WebApp Hub</h1>
+<header class="site-header">
+  <h1>Poteuxx WebApp Hub</h1>
+  <p>Centralisation de services & outils web</p>
 </header>
 
-<nav>
+<nav class="main-nav">
   <button onclick="loadTool('home')">Accueil</button>
   <button onclick="loadTool('store')">Store</button>
   <button onclick="loadTool('ostiguytech')">Contact</button>
   <button onclick="loadTool('markdown')">Preview HTML</button>
   <button onclick="loadTool('traffic')">OSINT</button>
-  <button onclick="loadTool('solution')">Solution</button>
-  <button onclick="loadTool('optimise')">Optimization</button>
+  <button onclick="loadTool('solution')">Solutions</button>
+  <button onclick="loadTool('optimise')">Optimisation</button>
 </nav>
 
-<main>
+<main class="content">
   <iframe id="toolFrame" loading="lazy"></iframe>
 </main>
 
-<footer>
-      <div>© <span id="year"></span> Ostiguy Tech — Développeur indépendant. Design minimal & fiable.</div>
-    </footer>
-  </div>
-
-  <script>
-    // Petit script utile : année + amélioration progressive
-    document.getElementById('year').textContent = new Date().getFullYear();
+<footer class="site-footer">
+  © 2026 Ostiguy Tech — Développeur indépendant.<br>
+  Design minimal & fiable.
+</footer>
 
 <script src="app.js"></script>
 </body>
