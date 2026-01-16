@@ -2,7 +2,7 @@ const tools = {
   home: "home.html",
   markdown: "https://poteuxx.github.io/markdown-html-editor/",
   traffic: "https://poteuxx.github.io/osint-tool-html/",
-  editor: "https://poteuxx.github.io/ostiguy-tech/",
+  ostiguytech: "https://poteuxx.github.io/ostiguy-tech/",
   optimise: "https://github.com/poteuxx/gaming-pc-opti-st/",
   store: "https://github.com/poteuxx/st-store/",
   solution: " https://github.com/poteuxx/st-solution/"
