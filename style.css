@@ -1,14 +1,15 @@
 body {
   margin: 0;
-  font-family: system-ui, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   background: #0b0b0c;
   color: white;
 }
 
 header {
-  padding: 10px;
+  padding: 12px;
   background: #121214;
   text-align: center;
+  border-bottom: 1px solid #27272a;
 }
 
 nav {
@@ -26,6 +27,7 @@ nav button {
   padding: 8px 14px;
   border-radius: 6px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 nav button:hover {
@@ -33,7 +35,7 @@ nav button:hover {
 }
 
 main {
-  height: calc(100vh - 110px);
+  height: calc(100vh - 112px);
 }
 
 iframe {
