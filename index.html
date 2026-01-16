@@ -8,21 +8,34 @@
 </head>
 <body>
 
+<!-- TOP BANNER -->
+<div class="top-banner">
+  Made by <strong>SolutionsTechnologie</strong>
+</div>
+
 <header>
   <h1>🧩 Poteuxx WebApp Hub</h1>
 </header>
 
 <nav>
   <button onclick="loadTool('home')">Accueil</button>
-  <button onclick="loadtool('ostiguytech')">Contact</button>
-  <button onclick="loadTool('markdown')">Markdown</button>
-  <button onclick="loadTool('traffic')">Traffic</button>
-  <button onclick="loadTool('editor')">Editor</button>
+  <button onclick="loadTool('store')">Store</button>
+  <button onclick="loadTool('ostiguytech')">Contact</button>
+  <button onclick="loadTool('markdown')">Preview HTML</button>
+  <button onclick="loadTool('traffic')">OSINT</button>
+  <button onclick="loadTool('solution')">Solution</button>
+  <button onclick="loadTool('optimise')">Optimization</button>
 </nav>
 
 <main>
-  <iframe id="toolFrame"></iframe>
+  <iframe id="toolFrame" loading="lazy"></iframe>
 </main>
+
+<!-- FOOTER -->
+<footer>
+  © 2026 Ostiguy Tech — Développeur indépendant.<br>
+  Design minimal & fiable.
+</footer>
 
 <script src="app.js"></script>
 </body>
