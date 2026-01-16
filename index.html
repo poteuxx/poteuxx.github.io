@@ -31,11 +31,14 @@
   <iframe id="toolFrame" loading="lazy"></iframe>
 </main>
 
-<!-- FOOTER -->
 <footer>
-  © 2026 Ostiguy Tech — Développeur indépendant.<br>
-  Design minimal & fiable.
-</footer>
+      <div>© <span id="year"></span> Ostiguy Tech — Développeur indépendant. Design minimal & fiable.</div>
+    </footer>
+  </div>
+
+  <script>
+    // Petit script utile : année + amélioration progressive
+    document.getElementById('year').textContent = new Date().getFullYear();
 
 <script src="app.js"></script>
 </body>
