@@ -5,6 +5,7 @@ const tools = {
   ostiguytech: "https://poteuxx.github.io/ostiguy-tech/",
   optimise: "https://poteuxx.github.io/gaming-pc-opti-st/",
   store: "https://poteuxx.github.io/st-store/#accueil",
+    gamelibrary: "https://poteuxx.github.io/game-library/",
   solution: "https://poteuxx.github.io/st-solution/",
   ai: "https://poteuxx.github.io/ai-generation/"
 };
