@@ -1,6 +1,6 @@
 const tools = {
   home: "home.html",
-  login: "https://poteuxx.github.io/webhub-login/"
+  login: "https://poteuxx.github.io/webhub-login/",
   markdown: "https://poteuxx.github.io/markdown-html-editor/",
   traffic: "https://poteuxx.github.io/osint-tool-html/",
   ostiguytech: "https://poteuxx.github.io/ostiguy-tech/",
