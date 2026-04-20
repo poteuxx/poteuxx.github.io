@@ -3,6 +3,7 @@ const tools = {
   markdown: "https://poteuxx.github.io/markdown-html-editor/",
   traffic: "https://poteuxx.github.io/osint-tool-html/",
   ostiguytech: "https://poteuxx.github.io/ostiguy-tech/",
+  engineering: "https://poteuxx.github.io/dva-engineering-os/",
   optimise: "https://poteuxx.github.io/gaming-pc-opti-st/",
   store: "https://poteuxx.github.io/st-store/#accueil",
   gamelibrary: "https://poteuxx.github.io/game-library/",
