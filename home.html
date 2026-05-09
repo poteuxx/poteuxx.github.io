@@ -13,6 +13,58 @@ body {
   padding: 24px;
 }
 
+/* SEARCH BAR */
+.search-container {
+  margin-bottom: 30px;
+  position: relative;
+  max-width: 700px;
+}
+
+.search-box {
+  width: 100%;
+  height: 58px;
+  border: 1px solid #1f2937;
+  border-radius: 999px;
+  background: #111827;
+  color: white;
+  padding: 0 70px 0 24px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.25s ease;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+}
+
+.search-box::placeholder {
+  color: #94a3b8;
+}
+
+.search-box:focus {
+  border-color: #3b82f6;
+  box-shadow:
+    0 0 0 4px rgba(59,130,246,0.15),
+    0 10px 30px rgba(0,0,0,0.45);
+}
+
+.search-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+  font-size: 18px;
+  transition: 0.2s ease;
+}
+
+.search-btn:hover {
+  transform: translateY(-50%) scale(1.05);
+}
+
 h2 {
   font-size: 20px;
   margin-bottom: 10px;
@@ -35,7 +87,25 @@ p {
 </head>
 <body>
 
+<!-- SEARCH BAR -->
+<div class="search-container">
+  <input
+    type="text"
+    id="searchInput"
+    class="search-box"
+    placeholder="Rechercher avec DuckDuckGo..."
+  >
+
+  <button
+    class="search-btn"
+    onclick="searchDuckDuckGo()"
+  >
+    🔍
+  </button>
+</div>
+
 <h2>Bienvenue</h2>
+
 <p>
 Cette plateforme centralise des outils web, services techniques et solutions
 orientées performance, sécurité et automatisation.
@@ -46,6 +116,29 @@ orientées performance, sécurité et automatisation.
     Sélectionnez un module dans la barre de navigation pour commencer.
   </p>
 </div>
+
+<script>
+function searchDuckDuckGo() {
+  const query = document
+    .getElementById("searchInput")
+    .value
+    .trim();
+
+  if (query !== "") {
+    window.location.href =
+      "https://duckduckgo.com/?q=" +
+      encodeURIComponent(query);
+  }
+}
+
+document
+.getElementById("searchInput")
+.addEventListener("keydown", function(e) {
+  if (e.key === "Enter") {
+    searchDuckDuckGo();
+  }
+});
+</script>
 
 </body>
 </html>
