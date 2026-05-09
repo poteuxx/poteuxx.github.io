@@ -336,17 +336,19 @@ function searchDuckDuckGo(){
         url = "https://" + url;
       }
 
-      /* FULL PAGE NAVIGATION */
+      /* OPEN WEBSITE OUTSIDE YOUR PAGE */
 
-      window.top.location.href = url;
+      window.open(url, "_top");
 
     }else{
 
-      /* DUCKDUCKGO SEARCH */
+      /* OPEN DUCKDUCKGO OUTSIDE YOUR PAGE */
 
-      window.top.location.href =
+      window.open(
         "https://duckduckgo.com/?q=" +
-        encodeURIComponent(query);
+        encodeURIComponent(query),
+        "_top"
+      );
     }
   }
 }
