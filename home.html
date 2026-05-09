@@ -3,141 +3,327 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Accueil</title>
 
 <style>
-body {
-  background: #0b0c0f;
-  color: #e5e7eb;
-  font-family: system-ui;
-  padding: 24px;
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:
+    radial-gradient(circle at top left,#111827 0%,#0b0c0f 45%);
+    
+  color:#e5e7eb;
+
+  font-family:
+    "Segoe UI",
+    system-ui,
+    sans-serif;
+
+  min-height:100vh;
+
+  padding:24px;
 }
 
 /* SEARCH BAR */
-.search-container {
-  margin-bottom: 30px;
-  position: relative;
-  max-width: 700px;
+
+.search-container{
+  position:relative;
+
+  width:100%;
+  max-width:760px;
+
+  margin-bottom:35px;
 }
 
-.search-box {
-  width: 100%;
-  height: 58px;
-  border: 1px solid #1f2937;
-  border-radius: 999px;
-  background: #111827;
-  color: white;
-  padding: 0 70px 0 24px;
-  font-size: 16px;
-  outline: none;
-  transition: 0.25s ease;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.35);
-}
+.search-box{
 
-.search-box::placeholder {
-  color: #94a3b8;
-}
+  width:100%;
+  height:62px;
 
-.search-box:focus {
-  border-color: #3b82f6;
+  padding:
+    0 145px 0 24px;
+
+  border-radius:999px;
+
+  border:
+    1px solid #1f2937;
+
+  background:
+    rgba(17,24,39,0.96);
+
+  color:white;
+
+  font-size:16px;
+  font-weight:500;
+
+  outline:none;
+
+  transition:all .25s ease;
+
   box-shadow:
-    0 0 0 4px rgba(59,130,246,0.15),
-    0 10px 30px rgba(0,0,0,0.45);
+    0 10px 30px rgba(0,0,0,0.35);
 }
 
-.search-btn {
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 44px;
-  height: 44px;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  background: linear-gradient(135deg, #2563eb, #3b82f6);
-  color: white;
-  font-size: 18px;
-  transition: 0.2s ease;
+.search-box::placeholder{
+  color:#94a3b8;
 }
 
-.search-btn:hover {
-  transform: translateY(-50%) scale(1.05);
+.search-box:focus{
+
+  border-color:#3b82f6;
+
+  box-shadow:
+    0 0 0 5px rgba(59,130,246,0.12),
+    0 10px 35px rgba(0,0,0,0.45);
 }
 
-h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
+/* SEARCH BUTTON */
+
+.search-btn{
+
+  position:absolute;
+
+  right:8px;
+  top:50%;
+
+  transform:translateY(-50%);
+
+  height:48px;
+
+  padding:0 26px;
+
+  border:none;
+  border-radius:999px;
+
+  cursor:pointer;
+
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #3b82f6
+    );
+
+  color:white;
+
+  font-size:14px;
+  font-weight:600;
+
+  letter-spacing:.3px;
+
+  transition:all .2s ease;
+
+  box-shadow:
+    0 6px 20px rgba(37,99,235,0.35);
 }
 
-p {
-  color: #9ca3af;
-  line-height: 1.6;
-  font-size: 14px;
+.search-btn:hover{
+
+  transform:
+    translateY(-50%)
+    scale(1.03);
+
+  box-shadow:
+    0 8px 24px rgba(59,130,246,0.45);
 }
 
-.card {
-  margin-top: 20px;
-  padding: 16px;
-  background: #020617;
-  border: 1px solid #1f2937;
-  border-radius: 8px;
+.search-btn:active{
+
+  transform:
+    translateY(-50%)
+    scale(.97);
 }
+
+/* TITLES */
+
+h2{
+
+  font-size:30px;
+  font-weight:700;
+
+  margin-bottom:14px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ffffff,
+      #60a5fa
+    );
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+p{
+  color:#9ca3af;
+
+  line-height:1.8;
+
+  font-size:15px;
+
+  max-width:850px;
+}
+
+/* CARD */
+
+.card{
+
+  margin-top:24px;
+
+  padding:20px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(2,6,23,0.96),
+      rgba(15,23,42,0.92)
+    );
+
+  border:
+    1px solid #1f2937;
+
+  border-radius:18px;
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,0.30);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:700px){
+
+  body{
+    padding:18px;
+  }
+
+  .search-box{
+    height:58px;
+    font-size:15px;
+    padding-right:125px;
+  }
+
+  .search-btn{
+    height:42px;
+    padding:0 18px;
+    font-size:13px;
+  }
+
+  h2{
+    font-size:25px;
+  }
+
+}
+
 </style>
 </head>
+
 <body>
 
 <!-- SEARCH BAR -->
+
 <div class="search-container">
+
   <input
     type="text"
     id="searchInput"
     class="search-box"
-    placeholder="Rechercher avec DuckDuckGo..."
+    placeholder="Search websites or use DuckDuckGo..."
   >
 
   <button
     class="search-btn"
     onclick="searchDuckDuckGo()"
   >
-    🔍
+    Search
   </button>
+
 </div>
+
+<!-- MAIN CONTENT -->
 
 <h2>Bienvenue</h2>
 
 <p>
-Cette plateforme centralise des outils web, services techniques et solutions
-orientées performance, sécurité et automatisation.
+Cette plateforme centralise des outils web,
+services techniques et solutions
+orientées performance, sécurité
+et automatisation.
 </p>
 
 <div class="card">
+
   <p>
-    Sélectionnez un module dans la barre de navigation pour commencer.
+    Sélectionnez un module dans la barre
+    de navigation pour commencer.
   </p>
+
 </div>
 
 <script>
-function searchDuckDuckGo() {
-  const query = document
+
+/* SEARCH FUNCTION */
+
+function searchDuckDuckGo(){
+
+  const query =
+    document
     .getElementById("searchInput")
     .value
     .trim();
 
-  if (query !== "") {
-    window.location.href =
-      "https://duckduckgo.com/?q=" +
-      encodeURIComponent(query);
+  if(query !== ""){
+
+    /* DIRECT WEBSITE DETECTION */
+
+    if(
+      query.includes(".") &&
+      !query.includes(" ")
+    ){
+
+      let url = query;
+
+      /* AUTO HTTPS */
+
+      if(
+        !url.startsWith("http://") &&
+        !url.startsWith("https://")
+      ){
+        url = "https://" + url;
+      }
+
+      /* REDIRECT USER TO WEBSITE */
+
+      window.location.href = url;
+
+    }else{
+
+      /* DUCKDUCKGO SEARCH */
+
+      window.location.href =
+        "https://duckduckgo.com/?q=" +
+        encodeURIComponent(query);
+    }
   }
 }
 
+/* ENTER KEY SUPPORT */
+
 document
 .getElementById("searchInput")
-.addEventListener("keydown", function(e) {
-  if (e.key === "Enter") {
+.addEventListener("keydown", function(e){
+
+  if(e.key === "Enter"){
     searchDuckDuckGo();
   }
+
 });
+
 </script>
 
 </body>
