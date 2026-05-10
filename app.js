@@ -9,6 +9,7 @@ const tools = {
   store: "https://poteuxx.github.io/st-store/#accueil",
   gamelibrary: "https://poteuxx.github.io/game-library/",
   streaminglibrary: "https://poteuxx.github.io/streaming-library/",
+  trackslibrary: "https://poteuxx.github.io/tracks-library/",
   solution: "https://poteuxx.github.io/st-solution/",
   ai: "https://poteuxx.github.io/ai-generation/"
 };
